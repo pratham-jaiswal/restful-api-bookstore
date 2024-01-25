@@ -15,11 +15,11 @@
 **Request:** Body should contain JSON data with book details
 ```.json
 {
-    "title": "The Life of John Doe",
-    "author": "John Doe",
-    "isbn": "123-4567890123",
-    "price": "Rs. 123",
-    "quantity": 10
+  "title": "The Life of John Doe",
+  "author": "John Doe",
+  "isbn": "123-4567890123",
+  "price": "Rs. 123",
+  "quantity": 10
 }
 ```
 
@@ -28,20 +28,19 @@
 **Response:** Successful response (HTTP status code 200)
 ```.json
 {
-    "message": "Book added successfully"
+  "message": "Book added successfully"
 }
 ```
+Error response (HTTP status code 500)
 ```.json
-Error response (HTTP status code 500):
 {
   "message": "Failed to add book"
 }
 ```
-
 *or*
 ```.json
 {
-    "message": "Error ‘{parameter}’"
+  "message": "Error ‘{parameter}’"
 }
 ```
 
@@ -53,7 +52,7 @@ Error response (HTTP status code 500):
 **Response:** Successful response (HTTP status code 200)
 ```.json
 {
-    "books": [
+  "books": [
   {
     "title": "The Life of John Doe",
     "author": "John Doe",
@@ -62,7 +61,7 @@ Error response (HTTP status code 500):
     "quantity": 10
   },
   // ... other books
-    ]
+  ]
 }
 ```
 
@@ -84,8 +83,8 @@ Error response (HTTP status code 500):
   "quantity": 10
 }
 ```
+Error response (HTTP status code 404)
 ```.json
-Error response (HTTP status code 404):
 {
   "message": "Book not found"
 }
