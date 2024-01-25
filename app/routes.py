@@ -23,7 +23,6 @@ def check_credentials(username, password):
 
     return False
 
-# Add a new book
 @main.route('/books', methods=['POST'], endpoint='add_book')
 @requires_auth
 def add_book():
@@ -31,7 +30,6 @@ def add_book():
         data = request.get_json()
         new_book = Book(data['title'], data['author'], data['isbn'], data['price'], data['quantity'])
         
-        # Use insert_one instead of insert
         result = mongo.db.books.insert_one({
             'title': new_book.title,
             'author': new_book.author,
@@ -47,7 +45,6 @@ def add_book():
     except Exception as e:
         return jsonify({'message': f'Error: {str(e)}'}), 500
 
-# Retrieve all books
 @main.route('/books', methods=['GET'], endpoint='get_all_books')
 def get_all_books():
     books = mongo.db.books.find()
@@ -62,7 +59,6 @@ def get_all_books():
         })
     return jsonify({'books': book_list})
 
-# Retrieve a specific book by ISBN
 @main.route('/books/<isbn>', methods=['GET'], endpoint='get_book')
 def get_book_by_isbn(isbn):
     book = mongo.db.books.find_one({'isbn': isbn})
