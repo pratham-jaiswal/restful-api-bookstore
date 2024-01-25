@@ -18,7 +18,7 @@
     "title": "The Life of John Doe",
     "author": "John Doe",
     "isbn": "123-4567890123",
-    "price": “Rs. 123”,
+    "price": "Rs. 123",
     "quantity": 10
 }
 ```
@@ -58,7 +58,7 @@ Error response (HTTP status code 500):
     "title": "The Life of John Doe",
     "author": "John Doe",
     "isbn": "123-4567890123",
-    "price": “Rs. 123”,
+    "price": "Rs. 123",
     "quantity": 10
   },
   // ... other books
@@ -80,7 +80,7 @@ Error response (HTTP status code 500):
   "title": "The Life of John Doe",
   "author": "John Doe",
   "isbn": "123-4567890123",
-  "price": “Rs. 123”,
+  "price": "Rs. 123",
   "quantity": 10
 }
 ```
@@ -105,7 +105,7 @@ Error response (HTTP status code 404):
   "title": "The Life of John Doe",
   "author": "John Doe",
   "isbn": "123-4567890123",
-  "price": “Rs. 123”,
+  "price": "Rs. 123",
   "quantity": 5
 }
 ```
